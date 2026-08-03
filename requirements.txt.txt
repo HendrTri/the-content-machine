@@ -1,0 +1,5 @@
+streamlit
+crewai
+crewai-tools
+PyPDF2
+requests
