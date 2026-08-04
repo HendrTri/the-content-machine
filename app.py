@@ -1,6 +1,6 @@
 import streamlit as st
 import os
-import PyPDF2
+from pypdf import PdfReader
 import requests 
 import re       
 import base64
@@ -90,7 +90,7 @@ if st.button("🚀 Eksekusi CrewAI", use_container_width=True):
     
     brochure_data = ""
     if uploaded_file is not None:
-        pdf_reader = PyPDF2.PdfReader(uploaded_file)
+        pdf_reader = pdf_reader = PdfReader(uploaded_file)
         for page_num in range(len(pdf_reader.pages)):
             page = pdf_reader.pages[page_num]
             extracted = page.extract_text()
